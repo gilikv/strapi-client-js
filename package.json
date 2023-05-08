@@ -31,8 +31,7 @@
     }
   },
   "peerDependencies": {
-    "axios": "^1.4.0",
-    "qs": "^6.10.3"
+
   },
   "devDependencies": {
     "@types/node": "^16.9.4",
@@ -67,5 +66,8 @@
     "type": "git",
     "url": "https://github.com/kmariappan/strapi-client-js.git"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^1.4.0",
+    "qs": "^6.10.3"
+  }
 }
