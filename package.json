@@ -1,5 +1,5 @@
 {
-  "name": "@kmariappan/strapi-client-js",
+  "name": "strapi-client-js",
   "author": "Karthikeyan Mariappan",
   "description": "Javascript client for Strapi Rest API",
   "version": "0.0.0-development",
