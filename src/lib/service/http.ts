@@ -14,7 +14,7 @@ export const getAxiosInstance = (url: string, apiToken?: string): AxiosInstance 
     return config;
   };
 
-  API.interceptors.request.use(axiosConfig);
+  API.interceptors.request.use(axiosConfig as any);
 
   return API;
 };

@@ -89,10 +89,10 @@ export abstract class StrapiClientHelper<T> {
     let rawQuery = '';
     if (Array.isArray(value)) {
       value.map((val) => {
-        rawQuery += `&filters[${field}][$${operator}]=${val}`;
+        rawQuery += `&filters[${String(field)}][$${operator}]=${val}`;
       });
     } else {
-      rawQuery += `&filters[${field}][$${operator}]=${value}`;
+      rawQuery += `&filters[${String(field)}][$${operator}]=${value}`;
     }
     const parsedQuery = parse(rawQuery);
     return this._handleUrl(generateQueryString(parsedQuery));
@@ -129,9 +129,9 @@ export abstract class StrapiClientHelper<T> {
     const sort: string[] = [];
     _sort.map((item) => {
       if (item.order) {
-        sort.push(`${item.field}:${item.order}`);
+        sort.push(`${String(item.field)}:${item.order}`);
       } else {
-        sort.push(`${item.field}`);
+        sort.push(`${String(item.field)}`);
       }
     });
     return this._handleUrl(generateQueryString({ sort }));
